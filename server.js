@@ -51,7 +51,7 @@ app.post('/notes', (req, res) => {
   res.end();
 });
 
-// обработка delete-запроса:
+// обработка delete-запроса с динамическим параметром id:
 app.delete('/notes/:id', (req, res) => {
   const noteId = Number(req.params.id);
   const index = notes.findIndex((o) => o.id === noteId);
